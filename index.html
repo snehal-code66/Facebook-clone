@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialBook - Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            color: #1c1e21;
+        }
+
+        /* Navbar */
+        .navbar {
+            height: 60px;
+            background: #1877f2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            color: white;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .search {
+            width: 300px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .profile {
+            font-weight: bold;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 250px 1fr 250px;
+            gap: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar,
+        .rightbar {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        .sidebar h3,
+        .rightbar h3 {
+            margin-bottom: 15px;
+        }
+
+        .sidebar p {
+            padding: 12px 0;
+            cursor: pointer;
+        }
+
+        .sidebar p:hover {
+            color: #1877f2;
+        }
+
+        /* Create post */
+        .create-post {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .create-post textarea {
+            width: 100%;
+            height: 80px;
+            resize: none;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .post-btn {
+            margin-top: 10px;
+            background: #1877f2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .post-btn:hover {
+            background: #166fe5;
+        }
+
+        /* Posts */
+        .post {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+    </script>
+
+</body>
+</html>
+        .avatar {
+            width: 45px;
+            height: 45px;
+        }
+            background: #1877f2;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            return div.innerHTML;
+            font-weight: bold;
+        }
+        .post img {
+            width: 100%;
+
+            margin-top: 15px;
+            div.textContent = text;
+
+            border-radius: 8px;
+        }
+
+        .actions {
+
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            const div = document.createElement("div");
+            border-top: 1px solid #ddd;
+            padding-top: 12px;
+        }
+
+        .actions button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        function escapeHTML(text) {
+        }
+
+        .actions button:hover {
+            color: #1877f2;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+
+                margin: 15px;
+            }
+
+            .sidebar,
+
+        <input
+            class="search"
+            placeholder="Search SocialBook"
+        >
+                    ? "👍 Like"
+                    : "👍 Liked";
+        }
+        <div class="profile">Snehal</div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <p>🏠 Home</p>
+            <p>👤 Friends</p>
+            <p>💬 Messages</p>
+                button.textContent.includes("Liked")
+            <p>🔔 Notifications</p>
+            <p>⚙️ Settings</p>
+        </aside>
+
+        <!-- Feed -->
+        <section>
+
+            <!-- Create Post -->
+            <div class="create-post">
+                <textarea
+                    id="postText"
+
+            button.textContent =
+
+            type="text"
+
+    <!-- Navbar -->
+        <div class="logo">SocialBook</div>
+                    placeholder="What's on your mind?"
+    <header class="navbar">
+                ></textarea>
+
+        function likePost(button) {
+                <button class="post-btn" onclick="createPost()">
+                    Post
+                </button>
+            </div>
+
+            <!-- Existing Post -->
+            <article class="post">
+                <div class="post-header">
+                    <div class="avatar">S</div>
+            <br>
+
+        </aside>
+
+
+    <script>
+        function createPost() {
+            const text = document.getElementById("postText").value.trim();
+
+        }
+            if (text === "") {
+                alert("Please write something before posting.");
+                return;
+            const post = document.createElement("article");
+            post.className = "post";
+
+            post.innerHTML = `
+            document.getElementById("postText").value = "";
+                <div class="post-header">
+                    <div class="avatar">S</div>
+                    <div>
+                        <strong>Snehal</strong>
+                        <p>Just now</p>
+                    </div>
+                </div>
+
+                <p>${escapeHTML(text)}</p>
+
+                <div class="actions">
+                    <button onclick="likePost(this)">👍 Like</button>
+                    <button>💬 Comment</button>
+                    <button>↗ Share</button>
+                </div>
+            `;
+
+            document.querySelector("section").appendChild(post);
+
+            }
+
+    </main>
+            <p>⚫ Neha</p>
+
+            <p>🟢 Priya</p>
+            <br>
+            <p>🟢 Akshay</p>
+            <br>
+                    <div>
+            <p>🟢 Rahul</p>
+                        <strong>Snehal</strong>
+                        <p>2 hrs ago</p>
+                    </div>
+                </div>
+
+            <h3>Contacts</h3>
+                    <button>💬 Comment</button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Right Sidebar -->
+        <aside class="rightbar">
+                    <button>↗ Share</button>
+                <p>
+                    <button onclick="likePost(this)">👍 Like</button>
+                <div class="actions">
+
+                </p>
+                    Welcome to my SocialBook clone! 🚀
+            .rightbar {
+<body>
+</head>
+
+        }
+    </style>
+                display: none;
+            }
+
+            .search {
+            }
+                width: 180px;
+
